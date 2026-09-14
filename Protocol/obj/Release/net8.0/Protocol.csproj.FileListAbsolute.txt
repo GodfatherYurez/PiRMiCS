@@ -1,0 +1,11 @@
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\bin\Release\net8.0\Protocol.deps.json
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\bin\Release\net8.0\Protocol.dll
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\bin\Release\net8.0\Protocol.pdb
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\Protocol.GeneratedMSBuildEditorConfig.editorconfig
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\Protocol.AssemblyInfoInputs.cache
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\Protocol.AssemblyInfo.cs
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\Protocol.csproj.CoreCompileInputs.cache
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\Protocol.dll
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\refint\Protocol.dll
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\Protocol.pdb
+D:\MIREA_STUDY\7_semestr\PiRMiCS\PR1_UdpBasics_SOURCE\Protocol\obj\Release\net8.0\ref\Protocol.dll
