@@ -4,14 +4,17 @@ namespace UdpTelemetry.Protocol;
 
 public enum PacketType : byte
 {
+    // Типы из ПР1 оставлены для совместимости протокола.
     Movement = 1,
     Shoot = 2,
+    // Пакеты, используемые во второй практике для измерения RTT.
     Ping = 10,
     Pong = 11
 }
 
 public sealed record Packet(PacketType Type, ushort SequenceNumber, byte[] Payload)
 {
+    // Сигнатура помогает отсеять случайные UDP-датаграммы не нашего протокола.
     private const ushort Magic = 0x4D50;
     public const ushort ProtocolVersion = 1;
     public const int HeaderSize = 9;
@@ -20,6 +23,7 @@ public sealed record Packet(PacketType Type, ushort SequenceNumber, byte[] Paylo
 
     public static Packet Ping(ushort sequenceNumber, ulong clientSendTimeUs)
     {
+        // В PING передается только время отправки по монотонным часам клиента.
         var payload = new byte[PingPayloadSize];
         WriteU64(payload, 0, clientSendTimeUs);
         return new(PacketType.Ping, sequenceNumber, payload);
@@ -31,6 +35,7 @@ public sealed record Packet(PacketType Type, ushort SequenceNumber, byte[] Paylo
         ulong serverReceiveTimeUs,
         ulong serverSendTimeUs)
     {
+        // PONG возвращает номер PING и добавляет две серверные временные метки.
         var payload = new byte[PongPayloadSize];
         WriteU64(payload, 0, clientSendTimeUs);
         WriteU64(payload, 8, serverReceiveTimeUs);
@@ -51,6 +56,7 @@ public sealed record Packet(PacketType Type, ushort SequenceNumber, byte[] Paylo
             throw new InvalidDataException("Payload is larger than the protocol limit.");
         }
 
+        // Заголовок и полезная нагрузка собираются вручную в сетевом порядке big-endian.
         var data = new byte[HeaderSize + Payload.Length];
         WriteU16(data, 0, Magic);
         data[2] = (byte)Type;
@@ -69,6 +75,7 @@ public sealed record Packet(PacketType Type, ushort SequenceNumber, byte[] Paylo
         packet = null;
         error = string.Empty;
 
+        // Проверки выполняются до чтения payload, чтобы поврежденный пакет не вызвал исключение.
         if (data.Length < HeaderSize)
         {
             error = "Datagram is shorter than the 9-byte header.";
@@ -108,6 +115,7 @@ public sealed record Packet(PacketType Type, ushort SequenceNumber, byte[] Paylo
             return false;
         }
 
+        // После всех проверок можно безопасно выделить payload для нового пакета.
         packet = new Packet(type, ReadU16(data, 3), data[HeaderSize..].ToArray());
         return true;
     }

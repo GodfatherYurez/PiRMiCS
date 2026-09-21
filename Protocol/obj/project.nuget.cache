@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sPTx/eths1w=",
+  "dgSpecHash": "f9cgvYx4IEk=",
   "success": true,
-  "projectFilePath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\PR1_UdpBasics_SOURCE\\Protocol\\Protocol.csproj",
+  "projectFilePath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\GitHub_PiRMiCS\\Protocol\\Protocol.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yuraa\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.31\\microsoft.netcore.app.ref.8.0.31.nupkg.sha512",
     "C:\\Users\\yuraa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.31\\microsoft.windowsdesktop.app.ref.8.0.31.nupkg.sha512",

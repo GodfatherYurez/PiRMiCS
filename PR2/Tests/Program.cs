@@ -1,6 +1,7 @@
 using UdpTelemetry.Protocol;
 using UdpTelemetry.Telemetry;
 
+// Тесты запускаются без внешних библиотек и проверяют основные контракты ПР2.
 Run("PING/PONG round trip", () =>
 {
     var ping = Packet.Ping(17, 987654321UL);
@@ -15,6 +16,7 @@ Run("PING/PONG round trip", () =>
 
 Run("Malformed datagrams are rejected", () =>
 {
+    // Поврежденный пакет должен быть отклонен, а не привести к исключению в сервере или клиенте.
     var bytes = Packet.Ping(1, 100).Serialize();
     Assert(!Packet.TryDeserialize(bytes[..^1], out _, out _), "Truncated packet accepted");
     bytes[8] = 0;
@@ -26,6 +28,7 @@ Run("Malformed datagrams are rejected", () =>
 
 Run("Telemetry computes RTT and SRTT", () =>
 {
+    // Значения времени заданы вручную, поэтому формулы проверяются детерминированно.
     var tracker = new TelemetryTracker();
     Assert(tracker.TrackPing(1, 0, "test", 1), "Ping was not tracked");
     var status = tracker.OnPong(1, 100_000, out var first);
@@ -38,6 +41,7 @@ Run("Telemetry computes RTT and SRTT", () =>
 
 Run("Timeout, late, duplicate and unknown states", () =>
 {
+    // Один PING последовательно проходит все нестандартные состояния ответа.
     var tracker = new TelemetryTracker();
     tracker.TrackPing(1, 0, "test", 1);
     Assert(tracker.Expire(1_000_001).Count == 1, "Timeout was not recorded");

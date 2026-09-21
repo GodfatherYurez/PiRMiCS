@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\PR1_UdpBasics_SOURCE\\Client\\Client.csproj",
+      "projectUniqueName": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\GitHub_PiRMiCS\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\PR1_UdpBasics_SOURCE\\Client\\Client.csproj",
+      "projectPath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\GitHub_PiRMiCS\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\yuraa\\.nuget\\packages\\",
-      "outputPath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\PR1_UdpBasics_SOURCE\\Client\\obj\\",
+      "outputPath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\GitHub_PiRMiCS\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yuraa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -52,8 +52,8 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\PR1_UdpBasics_SOURCE\\Protocol\\Protocol.csproj": {
-              "projectPath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\PR1_UdpBasics_SOURCE\\Protocol\\Protocol.csproj"
+            "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\GitHub_PiRMiCS\\Protocol\\Protocol.csproj": {
+              "projectPath": "D:\\MIREA_STUDY\\7_semestr\\PiRMiCS\\GitHub_PiRMiCS\\Protocol\\Protocol.csproj"
             }
           }
         }
