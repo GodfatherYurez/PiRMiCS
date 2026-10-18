@@ -32,6 +32,7 @@
 
 ## Материалы
 
+- [Методичка для защиты ПР4 и ПР5](../docs/Defense_Guide_PR4_PR5.md)
 - [Описание базового измерения](../docs/Replication_Baseline.md)
 - [Описание оптимизаций и результатов](../docs/Replication_Optimization.md)
 - [Обзор проекта Unreal](../README.md)

@@ -26,6 +26,7 @@
 
 ## Материалы
 
+- [Методичка для защиты ПР4 и ПР5](../docs/Defense_Guide_PR4_PR5.md)
 - [Описание реализации предсказания](../docs/Prediction_Implementation.md)
 - [Матрица тестирования](../docs/Prediction_Test_Matrix.md)
 - [Обзор проекта Unreal](../README.md)
