@@ -1,0 +1,21 @@
+# Unreal build output
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+
+# Editor and IDE files
+.idea/
+*.sln
+*.slnx
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sdf
+
+# System files
+.DS_Store
+Thumbs.db
